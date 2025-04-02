@@ -1,4 +1,4 @@
- var uena = function(){
+ var DaBba = function(){
 	
 	/* Search Bar ============ */
 	var screenWidth = $( window ).width();
@@ -393,7 +393,7 @@
 jQuery(document).ready(function() {
 	$('[data-bs-toggle="popover"]').popover();
     'use strict';
-	uena.init();
+	DaBba.init();
 	
 });
 /* Document.ready END */
@@ -401,13 +401,13 @@ jQuery(document).ready(function() {
 /* Window Load START */
 jQuery(window).on('load',function () {
 	'use strict'; 
-	uena.load();	
+	DaBba.load();	
 });
 /*  Window Load END */
 
 /* Window Resize START */
 jQuery(window).on('resize',function () {
 	'use strict'; 
-	uena.resize();
+	DaBba.resize();
 });
 /*  Window Resize END */

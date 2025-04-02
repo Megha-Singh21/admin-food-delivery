@@ -4675,7 +4675,7 @@
           return this.getTimeStamp(dateStr);
         }
 
-        var output = Date.parse(dateStr.replace(/-/g, 'https://uena.dexignzone.com/').replace(/[a-z]+/gi, ' '));
+        var output = Date.parse(dateStr.replace(/-/g, 'https://DaBba.dexignzone.com/').replace(/[a-z]+/gi, ' '));
         output = this.getTimeStamp(output);
         return output;
       } // This fixes the difference of x-axis labels between chrome/safari
@@ -4684,7 +4684,7 @@
     }, {
       key: "parseDateWithTimezone",
       value: function parseDateWithTimezone(dateStr) {
-        return Date.parse(dateStr.replace(/-/g, 'https://uena.dexignzone.com/').replace(/[a-z]+/gi, ' '));
+        return Date.parse(dateStr.replace(/-/g, 'https://DaBba.dexignzone.com/').replace(/[a-z]+/gi, ' '));
       } // http://stackoverflow.com/questions/14638018/current-time-formatting-with-javascript#answer-14638191
 
     }, {
