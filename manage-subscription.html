@@ -669,7 +669,7 @@
 					<div class="collapse navbar-collapse justify-content-between">
 						<div class="header-left">
 							<div class="dashboard_bar">
-								Refer & Earn
+								Subscription Plans
 							</div>
 						</div>
 
@@ -869,53 +869,42 @@
 				<div class="row">
 					<div class="col-xl-12">
 						<div class="d-flex flex-wrap mb-3">
+							<a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#addPlanModal"
+								class="btn btn-outline-primary  me-auto mb-2">Add New Plan</a>
 							<!-- Add Order -->
-							<div class="modal fade" id="referhistoryModal">
-								<div class="modal-dialog modal-xl" role="document">
+							<div class="modal fade" id="addPlanModal">
+								<div class="modal-dialog" role="document">
 									<div class="modal-content">
 										<div class="modal-header">
-											<h5 class="modal-title">Refer History</h5>
+											<h5 class="modal-title">Add/Edit Plan</h5>
 											<button type="button" class="btn-close" data-bs-dismiss="modal">
 											</button>
 										</div>
 										<div class="modal-body">
-                                            <h4 class="text-center">Referral ID: DBA89369</h4>
-											<div class="table-responsive">
-                                                <table class="table table-striped primary-table-bordered">
-                                                    <thead class="thead-primary">
-                                                        <tr>
-                                                            <th>ID</th>
-                                                            <th>Name</th>
-                                                            <th>Email ID</th>
-                                                            <th>Contact No.</th>
-                                                            <th>Join Date</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>#18334</td>
-                                                            <td>Emilia Johanson</td>
-                                                            <td>EmiliaJohanson@gmail.com</td>
-                                                            <td>5737383838</td>
-                                                            <td>26 March 2023, 12:42 AM</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>#36303</td>
-                                                            <td>Jessica Wong</td>
-                                                            <td>JessicaWong@gmail.com</td>
-                                                            <td>3457383838</td>
-                                                            <td>28 May 2023, 12:42 AM</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>#93303</td>
-                                                            <td>Samantha Bake</td>
-                                                            <td>SamanthaBake@gmail.com</td>
-                                                            <td>8765383838</td>
-                                                            <td>01 July 2023, 12:42 AM</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
+											<form>
+												<div class="mb-3">
+													<label class="form-label text-black">Plan Title</label>
+													<input type="text" class="form-control">
+												</div>
+												<div class="mb-3">
+													<label class="form-label text-black">Price(INR)</label>
+													<input type="number" class="form-control">
+												</div>
+												<div class="mb-3">
+													<label class="form-label text-black">Short Description</label>
+													<textarea rows="3" class="form-control"></textarea>
+												</div>
+                                                <div class="mb-3">
+													<label class="form-label text-black">Plan Image</label>
+													<input type="file" class="form-control">
+                                                    <small>Format: PNG(transparent BG), Size: 200px X 100px</small>
+												</div>
+												<div class="">
+													<button type="button" class="btn btn-primary">SAVE</button>
+													<button type="button" class="btn btn-danger light"
+														data-bs-dismiss="modal">Close</button>
+												</div>
+											</form>
 										</div>
 									</div>
 								</div>
@@ -941,12 +930,13 @@
 												<label class="form-check-label" for="checkAll"></label>
 											</div>
 										</th>
-										<th><strong class="font-w600 wspace-no">Customer ID</strong></th>
-										<th><strong class="font-w600 wspace-no">Join Date</strong></th>
-										<th><strong class="font-w600 wspace-no">Customer Name</strong></th>
-										<th><strong class="font-w600 wspace-no">Location</strong></th>
-										<th><strong class="font-w600 wspace-no">Total Referred</strong></th>
-										<th><strong class="font-w600 wspace-no">Total Earned</strong></th>
+										<th><strong class="font-w600 wspace-no">Plan ID</strong></th>
+										<th><strong class="font-w600 wspace-no">Plan Name</strong></th>
+										<th><strong class="font-w600 wspace-no">Short Desciption</strong></th>
+										<th><strong class="font-w600 wspace-no">Cost(INR)</strong></th>
+										<th><strong class="font-w600 wspace-no">Plan Image</strong></th>
+                                        <th><strong class="font-w600 wspace-no">Total Subscribed</strong></th>
+                                        <th><strong class="font-w600 wspace-no">Display Order</strong></th>
 										<th class="bg-none"></th>
 									</tr>
 								</thead>
@@ -960,11 +950,12 @@
 											</div>
 										</td>
 										<td>#5552351</td>
-										<td>26 March 2023, 12:42 AM</td>
+										<td>Monthly</td>
 										<td>James WItcwicky</td>
-										<td>Corner Street 5th London</td>
-										<td>3</td>
-										<td><span class="font-w600">Rs. 1250</span></td>
+										<td>Rs. 6999</td>
+										<td><span><img src="images/product/2.jpg" width="100px" alt=""></span></td>
+										<td><span class="font-w600">83</span></td>
+                                        <td><input type="number" class="form-control" value="1"></td>
 										<td>
 											<div class="dropdown ms-auto c-pointer">
 												<div class="btn-link" data-bs-toggle="dropdown" aria-expanded="false"
@@ -987,8 +978,11 @@
 												</div>
 												<div class="dropdown-menu dropdown-menu-end">
 													<a class="dropdown-item text-black" href="javascript:void(0);"
-														data-bs-toggle="modal" data-bs-target="#referhistoryModal">
-														History
+														data-bs-toggle="modal" data-bs-target="#addPlanModal">
+														Edit Details
+													</a>
+													<a class="dropdown-item text-black" href="javascript:void(0);">
+														Remove
 													</a>
 												</div>
 											</div>
@@ -1003,11 +997,12 @@
 											</div>
 										</td>
 										<td>#5552323</td>
-										<td>20 April 2023, 12:42 AM</td>
+										<td>Weekly</td>
 										<td>Veronica</td>
-										<td>21 King Street London</td>
-										<td>1</td>
-										<td><span class="font-w600">Rs. 250</span></td>
+										<td>Rs. 1999</td>
+										<td><span><img src="images/product/1.jpg" width="100px" alt=""></span></td>
+										<td><span class="font-w600">62</span></td>
+                                        <td><input type="number" class="form-control" value="2"></td>
 										<td>
 											<div class="dropdown ms-auto c-pointer">
 												<div class="btn-link" data-bs-toggle="dropdown" aria-expanded="false"
@@ -1030,8 +1025,11 @@
 												</div>
 												<div class="dropdown-menu dropdown-menu-end">
 													<a class="dropdown-item text-black" href="javascript:void(0);"
-														data-bs-toggle="modal" data-bs-target="#referhistoryModal">
-														History
+														data-bs-toggle="modal" data-bs-target="#addPlanModal">
+														Edit Details
+													</a>
+													<a class="dropdown-item text-black" href="javascript:void(0);">
+														Remove
 													</a>
 												</div>
 											</div>
@@ -1046,11 +1044,12 @@
 											</div>
 										</td>
 										<td>#5552375</td>
-										<td>10 June 2023, 02:12 AM</td>
+										<td>Monthly-Single-Meal</td>
 										<td>Emilia Johanson</td>
-										<td>67 St. John’s RoadLondon</td>
-										<td>$251.16</td>
-										<td><span class="font-w600">$21.55</span></td>
+										<td>Rs. 4999</td>
+										<td><span><img src="images/product/3.jpg" width="100px" alt=""></span></td>
+										<td><span class="font-w600">42</span></td>
+                                        <td><input type="number" class="form-control" value="3"></td>
 										<td>
 											<div class="dropdown ms-auto c-pointer">
 												<div class="btn-link" data-bs-toggle="dropdown" aria-expanded="false"
@@ -1073,8 +1072,55 @@
 												</div>
 												<div class="dropdown-menu dropdown-menu-end">
 													<a class="dropdown-item text-black" href="javascript:void(0);"
-														data-bs-toggle="modal" data-bs-target="#referhistoryModal">
-														History
+														data-bs-toggle="modal" data-bs-target="#addPlanModal">
+														Edit Details
+													</a>
+													<a class="dropdown-item text-black" href="javascript:void(0);">
+														Remove
+													</a>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="sorting_1 pe-0 text-center">
+											<div class="form-check custom-checkbox ms-xl-4 ms-3">
+												<input type="checkbox" class="form-check-input" id="customCheckBox8"
+													required="">
+												<label class="form-check-label" for="customCheckBox8"></label>
+											</div>
+										</td>
+										<td>#5552311</td>
+										<td>Weekly-Single-Meal</td>
+										<td>Olivia Shine</td>
+										<td>Rs. 999</td>
+										<td><span><img src="images/product/4.jpg" width="100px" alt=""></span></td>
+										<td><span class="font-w600">43</span></td>
+                                        <td><input type="number" class="form-control" value="4"></td>
+										<td>
+											<div class="dropdown ms-auto c-pointer">
+												<div class="btn-link" data-bs-toggle="dropdown" aria-expanded="false"
+													role="button">
+													<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M11.0005 12C11.0005 12.5523 11.4482 13 12.0005 13C12.5528 13 13.0005 12.5523 13.0005 12C13.0005 11.4477 12.5528 11 12.0005 11C11.4482 11 11.0005 11.4477 11.0005 12Z"
+															stroke="#3E4954" stroke-width="2" stroke-linecap="round"
+															stroke-linejoin="round" />
+														<path
+															d="M18.0005 12C18.0005 12.5523 18.4482 13 19.0005 13C19.5528 13 20.0005 12.5523 20.0005 12C20.0005 11.4477 19.5528 11 19.0005 11C18.4482 11 18.0005 11.4477 18.0005 12Z"
+															stroke="#3E4954" stroke-width="2" stroke-linecap="round"
+															stroke-linejoin="round" />
+														<path
+															d="M4.00049 12C4.00049 12.5523 4.4482 13 5.00049 13C5.55277 13 6.00049 12.5523 6.00049 12C6.00049 11.4477 5.55277 11 5.00049 11C4.4482 11 4.00049 11.4477 4.00049 12Z"
+															stroke="#3E4954" stroke-width="2" stroke-linecap="round"
+															stroke-linejoin="round" />
+													</svg>
+												</div>
+												<div class="dropdown-menu dropdown-menu-end">
+													<a class="dropdown-item text-black" href="javascript:void(0);"
+														data-bs-toggle="modal" data-bs-target="#addPlanModal">
+														Edit Details
 													</a>
 													<a class="dropdown-item text-black" href="javascript:void(0);">
 														Remove
@@ -1136,6 +1182,5 @@
 
 </body>
 
-<!-- Mirrored from DaBba.dexignzone.com/flask/xhtml/customer-list.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Dec 2024 14:32:20 GMT -->
 
 </html>
